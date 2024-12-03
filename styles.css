@@ -1,0 +1,210 @@
+/* Reset básico para garantir que todos os navegadores aplicam o estilo da mesma forma */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f3e7;
+    color: #4d3d2d;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #c49e6c;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilo da Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #c49e6c, #dbc7a1);
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fffdf0;
+    font-size: 18px;
+    margin: 0 20px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #a89968;
+    border: 2px solid #fffdf0;
+    color: #4d3d2d;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Seções gerais */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f5f3e7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4d3d2d;
+}
+
+section h3 {
+    font-size: 2em;
+    margin-top: 30px;
+    color: #4d3d2d;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4d3d2d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Estilo da seção de Localização (Somente para a página Sobre Nós) */
+.about .location-info {
+    background-color: #dbc7a1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about .location-info p {
+    margin-bottom: 10px;
+}
+
+/* Mapa */
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    max-width: 100%;
+    height: 400px;
+}
+
+/* Responsividade para as seções */
+@media screen and (max-width: 768px) {
+    section p {
+        font-size: 1em;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+/* Estilos para o cardápio */
+.menu-category {
+    background-color: #dbc7a1;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h3 {
+    font-size: 2em;
+    color: #4d3d2d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-category ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #4d3d2d;
+}
+
+.dish-name {
+    font-weight: bold;
+    color: #4d3d2d;
+    font-size: 1.4em;
+}
+
+.menu-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilo dos preços */
+.menu-category ul li .price {
+    color: #c49e6c;
+    font-size: 1.2em;
+    font-weight: bold;
+    float: right; /* O preço ficará à direita */
+}
+
+/* Estilo dos nomes dos pratos */
+.menu-category ul li .dish-name {
+    color: #4d3d2d;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-right: 20px; /* Distância entre o nome do prato e o preço */
+    display: inline-block;
+}
+
+/* Adicionando um fundo mais suave */
+section {
+    background-color: #f5f3e7;
+}
+
+/* Adicionando espaçamento entre categorias */
+.menu-category + .menu-category {
+    margin-top: 30px;
+}
